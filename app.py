@@ -92,10 +92,17 @@ def receipt(reg_id):
 @app.route("/admin/login", methods=["GET", "POST"])
 def admin_login():
     if request.method == "POST":
-        if request.form["username"] == ADMIN_USERNAME and request.form["password"] == ADMIN_PASSWORD:
+        username = request.form.get("username", "").strip()
+        password = request.form.get("password", "").strip()
+
+        if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
             session["admin"] = True
             return redirect(url_for("admin_dashboard"))
+        else:
+            return render_template("admin_login.html", error="Invalid credentials")
+
     return render_template("admin_login.html")
+
 
 @app.route("/admin/dashboard")
 def admin_dashboard():
