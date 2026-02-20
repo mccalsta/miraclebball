@@ -1,0 +1,23 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div class="card">
+<h2>Admin Dashboard</h2>
+<p>Total Registrations: {{ total }}</p>
+<a href="/admin/export" class="btn">Export CSV</a>
+<table>
+<tr><th>ID</th><th>Name</th><th>Parent</th><th>Phone</th><th>Date</th></tr>
+{% for r in data %}
+<tr>
+<td>{{ r[0] }}</td>
+<td>{{ r[1] }}</td>
+<td>{{ r[8] }}</td>
+<td>{{ r[10] }}</td>
+<td>{{ r[18] }}</td>
+</tr>
+{% endfor %}
+</table>
+</div>
+</div>
+{% endblock %}

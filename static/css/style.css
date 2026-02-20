@@ -1,0 +1,11 @@
+
+body {margin:0;font-family:Arial;background:#F4F6F8;}
+header {background:#0D1B2A;color:white;padding:20px;display:flex;justify-content:space-between;}
+.hero {background:#0D1B2A;color:white;padding:100px 20px;text-align:center;}
+.btn {background:#F77F00;color:white;padding:10px 20px;border:none;border-radius:6px;text-decoration:none;}
+.container {max-width:1100px;margin:auto;padding:40px 20px;}
+.card {background:white;padding:30px;border-radius:10px;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+input, select, textarea {width:100%;padding:10px;margin-bottom:15px;border:1px solid #ccc;border-radius:5px;}
+table {width:100%;border-collapse:collapse;}
+th, td {padding:10px;border-bottom:1px solid #ddd;}
+th {background:#0D1B2A;color:white;}

@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+{% block content %}
+<div class="container">
+<div class="card">
+<h2>Full Registration Form</h2>
+<form method="POST">
+<h3>Player Details</h3>
+<input name="full_name" placeholder="Full Name" required>
+<input type="date" name="dob" required>
+<input name="age" placeholder="Age" required>
+<select name="gender"><option>Male</option><option>Female</option></select>
+<input name="school" placeholder="School">
+<input name="grade" placeholder="Class/Grade">
+<textarea name="address" placeholder="Residential Address"></textarea>
+
+<h3>Parent / Guardian</h3>
+<input name="parent_name" placeholder="Parent/Guardian Name">
+<input name="relationship" placeholder="Relationship">
+<input name="phone" placeholder="Phone">
+<input name="alt_phone" placeholder="Alternative Phone">
+<input name="email" placeholder="Email">
+<input name="occupation" placeholder="Occupation">
+
+<h3>Medical Information</h3>
+<textarea name="medical" placeholder="Medical Conditions"></textarea>
+<textarea name="allergies" placeholder="Allergies"></textarea>
+<input name="emergency_name" placeholder="Emergency Contact Name">
+<input name="emergency_phone" placeholder="Emergency Contact Phone">
+
+<button type="submit" class="btn">Submit Registration</button>
+</form>
+</div>
+</div>
+{% endblock %}
