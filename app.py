@@ -95,6 +95,11 @@ def admin_login():
         username = request.form.get("username", "").strip()
         password = request.form.get("password", "").strip()
 
+        print("USERNAME ENTERED:", username)
+        print("PASSWORD ENTERED:", password)
+        print("EXPECTED USERNAME:", ADMIN_USERNAME)
+        print("EXPECTED PASSWORD:", ADMIN_PASSWORD)
+
         if username == ADMIN_USERNAME and password == ADMIN_PASSWORD:
             session["admin"] = True
             return redirect(url_for("admin_dashboard"))
@@ -102,6 +107,7 @@ def admin_login():
             return render_template("admin_login.html", error="Invalid credentials")
 
     return render_template("admin_login.html")
+
 
 
 @app.route("/admin/dashboard")
